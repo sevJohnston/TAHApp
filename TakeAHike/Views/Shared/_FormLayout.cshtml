@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/css/styles.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <title>@ViewData["Title"] - OregonHikes</title>
+    <title>@ViewData["Title"] - TakeAHike</title>
 </head>
 <body>
     <nav class="navbar navbar-inverse ">
@@ -25,19 +25,23 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Hikes">Hikes</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="AddHike">Add a Hike</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="People">People</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Resources">Resources</a></li>
 
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2020 - OregonHikes</p>
-        </footer>
+        <div class="panel panel-success">
+            <div class="panel-heading text-center"><h3>@ViewData["Title"] Form</h3></div>
+            <div class="panel-body">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; 2020 - Take A Hike</p>
+                </footer>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
