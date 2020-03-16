@@ -13,6 +13,6 @@ namespace TakeAHike.Models
         public string Description { get; set; }
 
         //not sure about the list!
-        public List<Resource> Resources { get { return resources; } }
+        //public List<Resource> Resources { get { return resources; } }
     }
 }

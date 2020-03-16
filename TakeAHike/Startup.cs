@@ -145,8 +145,10 @@ namespace TakeAHike
             SeedData.Seed(appContext);
 
             //call to create admin account
+            /*
             AppDbContext.CreateAdminAccount(app.ApplicationServices,
                 Configuration).Wait();
+            */   
         }
     }
 }

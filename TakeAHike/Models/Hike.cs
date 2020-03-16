@@ -6,7 +6,7 @@ namespace TakeAHike.Models
 {
     public class Hike
     {
-       private List<Hike> hikes = new List<Hike>();
+       //private List<Hike> hikes = new List<Hike>();
         
         public int HikeID { get; set; }     //creates a HikeID and maps it as the primary key
 

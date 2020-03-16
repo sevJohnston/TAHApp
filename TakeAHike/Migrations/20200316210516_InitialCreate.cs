@@ -2,7 +2,7 @@
 
 namespace TakeAHike.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,9 +12,9 @@ namespace TakeAHike.Migrations
                 {
                     HikeID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TrailName = table.Column<string>(nullable: true),
-                    Region = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true)
+                    TrailName = table.Column<string>(maxLength: 150, nullable: false),
+                    Region = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(maxLength: 500, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,24 +29,12 @@ namespace TakeAHike.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ResourceName = table.Column<string>(nullable: true),
                     Link = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    ResourceID1 = table.Column<int>(nullable: true)
+                    Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Resources", x => x.ResourceID);
-                    table.ForeignKey(
-                        name: "FK_Resources_Resources_ResourceID1",
-                        column: x => x.ResourceID1,
-                        principalTable: "Resources",
-                        principalColumn: "ResourceID",
-                        onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Resources_ResourceID1",
-                table: "Resources",
-                column: "ResourceID1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

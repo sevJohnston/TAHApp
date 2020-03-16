@@ -9,7 +9,7 @@ using TakeAHike.Models;
 
 namespace TakeAHike.Repositories
 {
-    public class AppDbContext : IdentityDbContext<AppUser>
+    public class AppDbContext : DbContext
     {
         public AppDbContext(
             DbContextOptions<AppDbContext> options) : base(options) { }
@@ -19,6 +19,7 @@ namespace TakeAHike.Repositories
 
         public DbSet<Resource> Resources { get; set; }
 
+        /*
         public static async Task CreateAdminAccount(IServiceProvider serviceProvider,
             IConfiguration configuration)
         {
@@ -52,7 +53,8 @@ namespace TakeAHike.Repositories
                 {
                     await userManager.AddToRoleAsync(user, role);
                 }
-            }
+            }           
         }
+        */
     }
 }
