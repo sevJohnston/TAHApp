@@ -48,7 +48,8 @@ namespace TakeAHike
 
             //specify DbContext and ConnectionString         
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
-                    Configuration["ConnectionStrings:MsSqlConnection"]));
+                    Configuration.GetConnectionString("DefaultConnection")));
+                    //Configuration["ConnectionStrings:DefaultConnection"]));
             
 
             //add identity method
