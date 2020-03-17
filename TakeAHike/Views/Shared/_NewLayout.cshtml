@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />    
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    
+    
     <title>@ViewData["Title"] - OregonHikes</title>
 </head>
 <body>
@@ -21,11 +23,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>                    
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Hikes">Hikes</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="AddHike">Add a Hike</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Resources">Resources</a></li>
+                    <li><a asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Login">Logout</a></li>
 
                 </ul>
             </div>

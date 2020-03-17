@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace TakeAHike.Models
 {
@@ -14,6 +13,6 @@ namespace TakeAHike.Models
         public string Description { get; set; }
 
         //not sure about the list!
-        public List<Resource> Resources { get { return resources; } }
+        //public List<Resource> Resources { get { return resources; } }
     }
 }

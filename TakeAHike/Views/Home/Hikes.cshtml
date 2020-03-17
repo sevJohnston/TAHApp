@@ -2,37 +2,44 @@
 
 @{
     Layout = "_NewLayout";
-    ViewData["Title"] = "Hikes and Trail Reviews";
+    ViewData["Title"] = "Hikes by Region";
 }
 
-<body>
-    <div class="panel-body">
-        <h1>@ViewData["Title"]</h1>
+    <body>
+        <div class="panel-body">
+            <h1>@ViewData["Title"]</h1>
 
-        <table class="table table-sm table-responsive table-striped table-bordered">
-            <thead>
-                <tr>
-                    <th>TrailName</th>
-                    <th>Region</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (Hike h in Model)
-                {
+            <div class="container">
+                <div class="text-center">
+                    <img src="~/Images/OregonMap.png" alt="Oregon Map" style="width:600px;height:400px;" />
+                </div>
+            </div>
+
+            <table class="table table-sm table-responsive table-striped table-bordered">
+                <thead>
                     <tr>
-                        <td>@h.TrailName</td>
-                        <td>@h.Region</td>
-                        <td>@h.Description</td>
+                        <th>TrailName</th>
+                        <th>Region</th>
+                        <th>Description</th>
                     </tr>
-                    
-                }
+                </thead>
+                <tbody>
+                    @foreach (Hike h in Model)
+                    {
+                        <tr>
+                            <td>@h.TrailName</td>
+                            <td>@h.Region</td>
+                            <td>@h.Description</td>
+                        </tr>
+
+                    }
 
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+        
 
-</body>
+    </body>
 
 

@@ -3,37 +3,41 @@
     ViewData["Title"] = "Oregon Hikes";
 
 }
-<style>
-    body {
-        background-image: url('photo1.jpg');
-    }
-</style>
-<body>
 
-    <div class="text-center">
-        <div class="jumbotron">
-            <h1 class="display-4">@ViewData["Title"]</h1>
+    <body>
 
-            <h3>Get out and enjoy your state</h3>
+        <div class="text-center">
+            <div class="jumbotron">
+                <h1 class="display-4">@ViewData["Title"]</h1>
+
+                <h3>Get out and enjoy your state</h3>
+            </div>
         </div>
-    </div>
 
-    <div class="container bg-success">
-        <div class="page-header">
-            <blockquote>
-                <h2>"To me a lush carpet of pine needles or spongy grass is more welcome the most luxurious Persian rug." </h2>
-                <footer><H3>Helen Keller</H3></footer>
-            </blockquote>
+        <div class="container bg-success">
+            <div class="page-header">
+                <blockquote>
+                    <h2>"To me a lush carpet of pine needles or spongy grass is more welcome the most luxurious Persian rug." </h2>
+                    <footer><H3>Helen Keller</H3></footer>
+                </blockquote>
 
+            </div>
         </div>
-    </div>
+        <br />
+        <br />
+        <p><h3>Click the picture below to login and add a hike</h3></p>
 
-    <div class="container">
-        <div class="page-header">
-            <h3>Site Stats:</h3>
-            <h4>Number of Hikes: @ViewBag.hikeCount</h4>
-            <!-- this doesn't work properly!<h4>Newest Hike: <i>@ViewData["newestHike"]</i></h4> -->
+        <a asp-area="" asp-controller="Account" asp-action="Login">
+            <img src="~/Images/Mary'sPeakIMG.jpeg" alt="Mary's Peak"
+                 style="width:200px;height:300px;" />
+        </a>
+        <br />
+        <div class="container">
+            <div class="page-header">
+                <h3>Site Stats:</h3>
+                <h4>Number of Hikes: @ViewBag.hikeCount</h4>
+                <!-- this doesn't work properly!<h4>Newest Hike: <i>@ViewData["newestHike"]</i></h4> -->
+            </div>
         </div>
-    </div>
 
-</body>
+    </body>
