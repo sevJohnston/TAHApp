@@ -129,6 +129,7 @@ namespace TakeAHike
 
             //app.UseMvcWithDefaultRoute();
             app.UseRouting();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -145,10 +146,10 @@ namespace TakeAHike
             SeedData.Seed(appContext);
 
             //call to create admin account
-            /*
+            
             AppDbContext.CreateAdminAccount(app.ApplicationServices,
                 Configuration).Wait();
-            */   
+             
         }
     }
 }

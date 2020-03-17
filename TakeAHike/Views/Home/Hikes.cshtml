@@ -5,34 +5,41 @@
     ViewData["Title"] = "Hikes and Trail Reviews";
 }
 
-<body>
-    <div class="panel-body">
-        <h1>@ViewData["Title"]</h1>
+    <body>
+        <div class="panel-body">
+            <h1>@ViewData["Title"]</h1>
 
-        <table class="table table-sm table-responsive table-striped table-bordered">
-            <thead>
-                <tr>
-                    <th>TrailName</th>
-                    <th>Region</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (Hike h in Model)
-                {
+            <table class="table table-sm table-responsive table-striped table-bordered">
+                <thead>
                     <tr>
-                        <td>@h.TrailName</td>
-                        <td>@h.Region</td>
-                        <td>@h.Description</td>
+                        <th>TrailName</th>
+                        <th>Region</th>
+                        <th>Description</th>
                     </tr>
-                    
-                }
+                </thead>
+                <tbody>
+                    @foreach (Hike h in Model)
+                    {
+                        <tr>
+                            <td>@h.TrailName</td>
+                            <td>@h.Region</td>
+                            <td>@h.Description</td>
+                        </tr>
+
+                    }
 
 
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <p>Click the picture below to login and add a hike</p>
+        
+            <a asp-area="" asp-controller="Account" asp-action="Login">
+            <img src="~/Images/Mary'sPeakIMG.jpeg" alt="Mary's Peak"
+                 style="width:200px;height:300px;" />
+        </a>
 
-</body>
+    </body>
 
 

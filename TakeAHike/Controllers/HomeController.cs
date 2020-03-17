@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using TakeAHike.Models;
@@ -35,11 +36,13 @@ namespace TakeAHike.Controllers
             return View(hikes);
         }
 
+        [Authorize(Roles = "Members")]
         public IActionResult AddHike()
         {
             return View();
         }
 
+        [Authorize(Roles = "Members")]
         [HttpPost]
         public RedirectToActionResult AddHike(string trailName, string region, string description)
         {
